@@ -6,26 +6,10 @@ pipeline {
         branch "develop"
       }
       steps{
-        echo "maven package"
+        echo "Hello this is maven build"
       }
     }
-    stage("Sonar Analysis"){
-      when {
-        branch "develop"
-      }
-      steps{
-        echo "sonar analysis"
-      }
-    }
-    stage("Dev Deploy"){
-      when {
-        branch "develop"
-      }
-      steps{
-        echo "deploy to dev...."
-      }
-    }
-    stage("Test Deploy"){
+        stage("Test Deploy"){
       when {
         branch "test"
       }
